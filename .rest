@@ -1,0 +1,55 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE1NTAwNjk3LCJleHAiOjE3MTU1MDA3Mjd9.C5d443-JRPu9asJMHPMlr9A3sOGW4Cw1qiSB1c1IY64
+
+{
+  "nama": "yupi",
+  "email": "yupi@gmail.com",
+  "password": "yupi",
+  "confirmPassword": "yupi",
+  "telepon": "08958273947"
+}
+
+###
+
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+  "username": "penjual1",
+  "nama": "penjual1",
+  "email": "penjual1@gmail.com",
+  "password": "penjual1",
+  "confirmPassword": "penjual1",
+  "telepon": "081234567890"
+}
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email":"penjual@gmail.com",
+  "password":"penjual"
+}
+
+###
+GET http://localhost:5000/token
+###
+GET http://localhost:5000/me
+###
+DELETE http://localhost:5000/logout
+###
+
+PATCH http://localhost:5000/users/bc6e4855-e4cb-4e50-8a39-966d7670f29f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE1NTAwODM4LCJleHAiOjE3MTU1MDA4Njh9.h342wPShtoi_OkSjHWgFolsl_ipwILchlF66WWW3PzU
+
+{
+  "role": "kurir",
+  "nama_kurir": "mangga"
+}
+
+###
+GET http://localhost:5000/barang
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE1NTcxNDY5LCJleHAiOjE3MTU1NzE0OTl9.69mp2w48eLIdAMsPFu3dgNl3jiANJ7gpK9Hdxp_AxQQ
